@@ -24,8 +24,8 @@
 #include "time.h"
 
 // WiFi credentials
-const char* ssid = "AG_1";
-const char* password = "Tata_TML_x415";
+const char* ssid = "wifi_name";
+const char* password = "password";
 
 // Timezone Settings
 const char* ntpServer = "pool.ntp.org";
