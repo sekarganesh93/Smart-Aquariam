@@ -1,33 +1,5 @@
 # Smart-Aquariam
 Smart Aquarium Controller
- Wiring Details
-
-Device/Module	ESP32 GPIO Pin	Notes
-Water Temp Sensor (DS18B20)	GPIO21	Use 4.7kΩ pull-up resistor between Data and VCC
-Fan (via relay/MOSFET)	GPIO4	Controls fan automatically/manual
-Light (via relay/MOSFET)	GPIO5	Controls lighting based on time/manual
-Filter (via relay/MOSFET)	GPIO13	Controls filter based on time/manual
-Push Button 1 (on-board)	GPIO0	Used for test mode/manual activation
-TFT Display	Built-in	SPI wired internally
-Power	5V via USB	Or external regulated 5V supply
-⚡ Important: Use relay modules or MOSFET driver boards when controlling motors, fans, lights (do not drive high current directly from ESP32).
-
-⚙️ Hardware Notes
-DS18B20 Temp Sensor:
-
-Data -> GPIO21
-
-Pull-up resistor (4.7kΩ) needed between Data and 3.3V
-
-GND -> GND
-
-VCC -> 3.3V
-
-Relays / MOSFETs:
-
-Connect control pins of relays/MOSFETs to respective GPIOs (1, 3, 10).
-
-Drive external 5V/12V load safely.
 
 📜 Project Overview
 Device: LilyGO T-Display-S3 (ESP32-S3 + 1.9" TFT display)
@@ -69,6 +41,39 @@ Middle	Water Temperature (°C)
 Below	Cooling Fan Status (ON / OFF / ON-Test)
 Lower	Light Status (ON / OFF / ON-Test)
 Bottom	Filter Status (ON / OFF / ON-Test)
+
+🔌Wiring Details
+
+Device/Module	ESP32 GPIO Pin	Notes
+
+Water Temp Sensor (DS18B20)	GPIO21	Use 4.7kΩ pull-up resistor between Data and VCC
+Fan (via relay/MOSFET)	GPIO4	Controls fan automatically/manual
+Light (via relay/MOSFET)	GPIO5	Controls lighting based on time/manual
+Filter (via relay/MOSFET)	GPIO13	Controls filter based on time/manual
+Push Button 1 (on-board)	GPIO0	Used for test mode/manual activation
+TFT Display	Built-in	SPI wired internally
+Power	5V via USB	Or external regulated 5V supply
+
+⚡ Important: Use relay modules or MOSFET driver boards when controlling motors, fans, lights (do not drive high current directly from ESP32).
+
+⚙️ Hardware Notes
+DS18B20 Temp Sensor:
+
+Data -> GPIO21
+
+Pull-up resistor (4.7kΩ) needed between Data and 3.3V
+
+GND -> GND
+
+VCC -> 3.3V
+
+Relays / MOSFETs:
+
+Connect control pins of relays/MOSFETs to respective GPIOs (1, 3, 10).
+
+Drive external 5V/12V load safely.
+
+
 🛠️ Software Libraries Used
 WiFi.h — Connect ESP32 to Wi-Fi.
 
