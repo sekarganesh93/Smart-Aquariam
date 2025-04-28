@@ -25,7 +25,7 @@ VCC -> 3.3V
 
 Relays / MOSFETs:
 
-Connect control pins of relays/MOSFETs to respective GPIOs (4, 5, 13).
+Connect control pins of relays/MOSFETs to respective GPIOs (1, 3, 10).
 
 Drive external 5V/12V load safely.
 
